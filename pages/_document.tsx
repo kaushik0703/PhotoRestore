@@ -5,22 +5,22 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/restore.png" />
           <meta
             name="description"
-            content="Restore your old face photos and keep the memories alive."
+            content="Helping to restore your memories back."
           />
-          <meta property="og:site_name" content="restorePhotos.io" />
+          <meta property="og:site_name" content="restorememories.netlify.app" />
           <meta
             property="og:description"
-            content="Restore your old face photos and keep the memories alive."
+            content="Helping to restore your memories back."
           />
-          <meta property="og:title" content="Face Photo Restorer" />
+          <meta property="og:title" content="Memory Restorer" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Face Photo Restorer" />
           <meta
             name="twitter:description"
-            content="Restore your old photos and keep the memories alive."
+            content="Helping to restore your memories back."
           />
           <meta
             property="og:image"
