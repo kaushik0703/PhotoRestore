@@ -23,12 +23,12 @@ export default function Footer() {
         </a>
         and{" "}
         <a
-          href="https://vercel.com/"
+          href="https://www.netlify.com"
           target="_blank"
           rel="noreferrer"
           className="font-bold transition hover:text-black/50"
         >
-          Vercel.
+          Netlify.
         </a>
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
