@@ -17,14 +17,14 @@ export default function Header() {
         </h1>
       </Link>
       <a
-        href="https://vercel.com/templates/next.js/ai-photo-restorer"
+        href="https://github.com/kaushik0703/PhotoRestore.git"
         target="_blank"
         rel="noreferrer"
       >
         <Image
           alt="Vercel Icon"
-          src="/vercelLogo.png"
-          className="sm:w-10 sm:h-[34px] w-8 h-[28px]"
+          src="/netlify.svg"
+          className="sm:w-10 sm:h-[54px] w-8 h-[28px]"
           width={32}
           height={28}
         />
