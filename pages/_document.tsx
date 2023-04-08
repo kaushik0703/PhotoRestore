@@ -17,7 +17,7 @@ class MyDocument extends Document {
           />
           <meta property="og:title" content="Memory Restorer" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Face Photo Restorer" />
+          <meta name="twitter:title" content="Memory Restorer" />
           <meta
             name="twitter:description"
             content="Helping to restore your memories back."
