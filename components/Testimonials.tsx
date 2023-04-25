@@ -14,7 +14,7 @@ const testimonials = [
     },
     {
       content:
-        "Your face restoration site is incredible! I love how you can transform any image into a high-quality portrait. Your site is a treasure for anyone who wants to preserve their memories.",
+        "I have discovered that this website is both user-friendly and beneficial in enhancing the clarity of older photographs. As a result, I have recommended it to my close acquaintances who have also provided positive feedback and found the website to be useful in restoring the quality of their images.",
       link: "https://www.instagram.com/pranadeep_1176/",
       author: {
         name: "Pranadeep",
