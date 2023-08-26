@@ -11,6 +11,10 @@ const Home: NextPage = () => {
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
         <title>Face Photo Restorer</title>
+        <meta name="author" content="Kaushik Moralwar" />
+        <meta
+          name="description"
+          content="Restore Photos and Bringing old memories back to life..." />
       </Head>
 
       <Header />
