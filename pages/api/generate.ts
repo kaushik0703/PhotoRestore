@@ -23,7 +23,7 @@ export default async function handler(
   req: ExtendedNextApiRequest,
   res: NextApiResponse<Data>
 ) 
-// {
+{
 //   // Check if user is logged in
 //   const session = await getServerSession(req, res, authOptions);
 //   if (!session || !session.user) {
