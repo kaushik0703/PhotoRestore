@@ -31,27 +31,27 @@ export default async function handler(
 //   }
 
   // Rate Limiting by user email
-  if (ratelimit) {
-    const identifier = session.user.email;
-    const result = await ratelimit.limit(identifier!);
-    res.setHeader("X-RateLimit-Limit", result.limit);
-    res.setHeader("X-RateLimit-Remaining", result.remaining);
+  // if (ratelimit) {
+  //   const identifier = session.user.email;
+  //   const result = await ratelimit.limit(identifier!);
+  //   res.setHeader("X-RateLimit-Limit", result.limit);
+  //   res.setHeader("X-RateLimit-Remaining", result.remaining);
 
-    // // Calcualte the remaining time until generations are reset
-    // const diff = Math.abs(
-    //   new Date(result.reset).getTime() - new Date().getTime()
-    // );
-    // const hours = Math.floor(diff / 1000 / 60 / 60);
-    // const minutes = Math.floor(diff / 1000 / 60) - hours * 60;
+  //   // // Calcualte the remaining time until generations are reset
+  //   // const diff = Math.abs(
+  //   //   new Date(result.reset).getTime() - new Date().getTime()
+  //   // );
+  //   // const hours = Math.floor(diff / 1000 / 60 / 60);
+  //   // const minutes = Math.floor(diff / 1000 / 60) - hours * 60;
 
-    if (!result.success) {
-      return res
-        .status(429)
-        .json(
-          `Your generations will renew in ${hours} hours and ${minutes} minutes. Email hassan@hey.com if you have any questions.`
-        );
-    }
-  }
+  //   if (!result.success) {
+  //     return res
+  //       .status(429)
+  //       .json(
+  //         `Your generations will renew in ${hours} hours and ${minutes} minutes. Email hassan@hey.com if you have any questions.`
+  //       );
+  //   }
+  // }
 
   const imageUrl = req.body.imageUrl;
   // POST request to Replicate to start the image restoration generation process
