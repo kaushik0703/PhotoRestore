@@ -1,7 +1,7 @@
 import { Ratelimit } from "@upstash/ratelimit";
 import type { NextApiRequest, NextApiResponse } from "next";
 import redis from "../../utils/redis";
-import { authOptions } from "./auth/[...nextauth]";
+// import { authOptions } from "./auth/[...nextauth]";
 
 type Data = string;
 interface ExtendedNextApiRequest extends NextApiRequest {
