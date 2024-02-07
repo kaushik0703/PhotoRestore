@@ -1,7 +1,6 @@
 import { Ratelimit } from "@upstash/ratelimit";
 import type { NextApiRequest, NextApiResponse } from "next";
 import redis from "../../utils/redis";
-import { getServerSession } from "next-auth/next";
 import { authOptions } from "./auth/[...nextauth]";
 
 type Data = string;
@@ -23,12 +22,13 @@ const ratelimit = redis
 export default async function handler(
   req: ExtendedNextApiRequest,
   res: NextApiResponse<Data>
-) {
-  // Check if user is logged in
-  const session = await getServerSession(req, res, authOptions);
-  if (!session || !session.user) {
-    return res.status(500).json("Login to upload.");
-  }
+) 
+// {
+//   // Check if user is logged in
+//   const session = await getServerSession(req, res, authOptions);
+//   if (!session || !session.user) {
+//     return res.status(500).json("Login to upload.");
+//   }
 
   // Rate Limiting by user email
   if (ratelimit) {
@@ -37,12 +37,12 @@ export default async function handler(
     res.setHeader("X-RateLimit-Limit", result.limit);
     res.setHeader("X-RateLimit-Remaining", result.remaining);
 
-    // Calcualte the remaining time until generations are reset
-    const diff = Math.abs(
-      new Date(result.reset).getTime() - new Date().getTime()
-    );
-    const hours = Math.floor(diff / 1000 / 60 / 60);
-    const minutes = Math.floor(diff / 1000 / 60) - hours * 60;
+    // // Calcualte the remaining time until generations are reset
+    // const diff = Math.abs(
+    //   new Date(result.reset).getTime() - new Date().getTime()
+    // );
+    // const hours = Math.floor(diff / 1000 / 60 / 60);
+    // const minutes = Math.floor(diff / 1000 / 60) - hours * 60;
 
     if (!result.success) {
       return res
